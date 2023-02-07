@@ -504,8 +504,14 @@ section{
 .inner-gallery {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #000;
     color: #fff;
+}
+
+.title-gallery {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 30px;
+    color: var(--black);
 }
 
 .item-img{
@@ -514,17 +520,40 @@ section{
 
 .bagi2{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
+    justify-content: left;
+    row-gap: 20px;
+    column-gap: 40px;
+
 }
 
-.image {
+.bagi3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: right;
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.bagi2 .item-img {
     position: relative;
-    height: 265px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px lightgray;
+    width: 150px;
+    height: 150px;
 }
 
-.image img{
+.bagi2 .item-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.bagi3 .item-img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.bagi3 .item-img img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -565,6 +594,28 @@ section{
         left:auto;
         right: 8rem;
     }
+
+    .inner-gallery {
+        display: grid;
+        grid-template-columns: auto auto;
+        color: #fff;
+    }
+
+    .bagi3{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 40px;
+    }
+
+    .bagi2{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 40px;
+    }
 }
 
 @media(max-width:768px){
@@ -578,7 +629,6 @@ section{
         top:99%;
         left:0;
         right:0;
-        background:var(--main);
         border-top:1px solid rgba(0,0,0,0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
@@ -589,10 +639,37 @@ section{
     .header .navbar a{
         margin: 1.5rem;
         padding:1.5rem;
-        background:var(--Tusk);
+        background:var(--main);
         font-size: 2rem;
         display:block;
         border-radius: .5rem;
+    }
+
+    .title-gallery{
+        display: none;
+    }
+
+    .inner-gallery {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 100px;
+        color: #fff;
+    }
+
+    .bagi3{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 40px;
+    }
+
+    .bagi2{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 40px;
     }
 }
 
