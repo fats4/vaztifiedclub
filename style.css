@@ -509,9 +509,10 @@ section{
 
 .title-gallery {
     font-size: 2rem;
+    position: relative;
     text-align: center;
-    padding-bottom: 30px;
     color: var(--black);
+    padding-bottom: 2vh;
 }
 
 .item-img{
@@ -588,7 +589,7 @@ section{
     .home #next-slide,
     .home #prev-slide{
         transform:translateY(0);
-        top: 88%;
+        top: 90%;
     }
     .home #prev-slide{
         left:auto;
